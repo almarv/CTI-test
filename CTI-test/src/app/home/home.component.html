@@ -45,7 +45,12 @@
 					  </tr>
 					</tbody>
 				  </table>
-				  
+				  <label for="example-select" class="selectbox">items Per Page : </label>
+					<select class="form-select" (change)="onItemsPerPageChange($event)">
+						<option value="3">3 items</option>
+						<option value="5">5 items</option>
+						<option value="10">10 items</option>
+					</select>
 				  <nav *ngIf="pageCount > 1">
 					<ul class="pagination">
 					  <li class="page-item" [ngClass]="{'disabled': currentPage === 1}">
@@ -58,7 +63,7 @@
 						<a class="page-link" (click)="nextPage()">Next</a>
 					  </li>
 					</ul>
-				  </nav>
+				  </nav><br><br>
 				  
             </div>
         </div>
